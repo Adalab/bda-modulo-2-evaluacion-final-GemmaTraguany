@@ -16,7 +16,7 @@ A lo largo de los distintos ejercicios propuestos, he aplicado de manera integra
 
 ## 🧠 Enfoque
 
-Cada consulta fue desarrollada con base en un enunciado que simula necesidades reales de análisis de datos en una base de datos de películas. 
+Cada consulta ha sido desarrollada con base en un enunciado que simula necesidades reales de análisis de datos en una base de datos de películas 'Sakila'. 
 He realizado una interpretación cuidadosa de cada requerimiento, planteando consultas SQL claras, eficientes y estructuradas según las **buenas prácticas** del lenguaje.
 
 ## 🎯 Objetivo
