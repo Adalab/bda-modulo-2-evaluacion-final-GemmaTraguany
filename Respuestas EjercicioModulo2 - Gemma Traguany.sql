@@ -105,11 +105,39 @@ WHERE description LIKE '%dog%' OR '%cat%';
 
 /*15. Hay algún actor o actriz que no apareca en ninguna película en la tabla film_actor.*/
 
-/*16.
+SELECT CONCAT(a.first_name, ' ', a.last_name) Nombre_Actor_Actriz
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+WHERE fa.film_id IS NULL;
+
+/*16.Encuentra el título de todas las películas que fueron lanzadas entre el año 2005 y 2010.*/
+
+SELECT title Titulo, release_year Año_lanzamiento
+FROM film
+WHERE release_year BETWEEN 2005 AND 2010
+ORDER BY Año_lanzamiento;
+
+-- Solución diferente (con subconsulta) para tener una respuesta, ya que la anterior nos da columna vacía.
+SELECT EXISTS (  -- Existe una fila que cumpla una condición? Para que nos devuelva un booleano, 1 (true) o 0 (false). 
+	SELECT 1
+    FROM actor a     -- Unimos todos los actores con sus peliculas.
+    LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id
+    WHERE fa.film_id IS NULL
+) Hay_actores_sin_pelis;
+
+/*17. Encuentra el título de todas las películas que son de la misma categoría que "Family".*/
+
+SELECT f.title Titulo, c.name Categoria
+FROM category c
+JOIN film_category fc ON fc.category_id = c.category_id
+JOIN film f ON f.film_id = fc.film_id
+WHERE c.name = 'Family';
+
+/*18. Muestra el nombre y apellido de los actores que aparecen en más de 10 películas.*/
 
 
-SELECT * FROM customer;
-SELECT * FROM rental;
-SELECT * FROM actor;
 SELECT * FROM film;
+SELECT * FROM film_category;
+SELECT * FROM category;
 SELECT * FROM film_actor;
+SELECT * FROM actor;
