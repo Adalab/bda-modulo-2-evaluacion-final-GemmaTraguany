@@ -29,3 +29,14 @@ El objetivo es demostrar la **comprensión sólida del lenguaje SQL** y la capac
 - MySQL Workbench
 - Base de datos de práctica: *Sakila*
 
+## 🛠️ Tablas utlizadas en MySQL para hacer las consultas:
+
+SELECT * FROM film;
+SELECT * FROM actor;
+SELECT * FROM film_category;
+SELECT * FROM film_actor;
+
+SELECT * FROM category;
+SELECT * FROM inventory;
+SELECT * FROM rental;
+
