@@ -105,6 +105,8 @@ WHERE description LIKE '%dog%' OR '%cat%';
 
 /*15. Hay algún actor o actriz que no apareca en ninguna película en la tabla film_actor.*/
 
+/*16.
+
 
 SELECT * FROM customer;
 SELECT * FROM rental;
