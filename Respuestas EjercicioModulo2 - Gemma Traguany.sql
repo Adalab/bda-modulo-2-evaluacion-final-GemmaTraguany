@@ -108,13 +108,6 @@ FROM actor a
 JOIN film_actor fa ON a.actor_id = fa.actor_id
 WHERE fa.film_id IS NULL;
 
-/*16.Encuentra el título de todas las películas que fueron lanzadas entre el año 2005 y 2010.*/
-
-SELECT title Titulo, release_year Año_lanzamiento
-FROM film
-WHERE release_year BETWEEN 2005 AND 2010
-ORDER BY Año_lanzamiento;
-
 -- Solución diferente (con subconsulta) para tener una respuesta, ya que la anterior nos da columna vacía.
 SELECT EXISTS (  -- Existe una fila que cumpla una condición? Para que nos devuelva un booleano, 1 (true) o 0 (false). 
 	SELECT 1
@@ -122,6 +115,15 @@ SELECT EXISTS (  -- Existe una fila que cumpla una condición? Para que nos devu
     LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id
     WHERE fa.film_id IS NULL
 ) Hay_actores_sin_pelis;
+
+/*16.Encuentra el título de todas las películas que fueron lanzadas entre el año 2005 y 2010.*/
+
+SELECT title Titulo, release_year Año_lanzamiento
+FROM film
+WHERE release_year BETWEEN 2005 AND 2010
+ORDER BY Año_lanzamiento;
+
+
 
 /*17. Encuentra el título de todas las películas que son de la misma categoría que "Family".*/
 
