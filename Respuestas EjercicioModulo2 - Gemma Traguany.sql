@@ -123,8 +123,6 @@ FROM film
 WHERE release_year BETWEEN 2005 AND 2010
 ORDER BY Año_lanzamiento;
 
-
-
 /*17. Encuentra el título de todas las películas que son de la misma categoría que "Family".*/
 
 SELECT f.title Titulo, c.name Categoria
