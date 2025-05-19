@@ -32,11 +32,16 @@ El objetivo es demostrar la **comprensión sólida del lenguaje SQL** y la capac
 ## 🛠️ Tablas utlizadas en MySQL para hacer las consultas:
 
 SELECT * FROM film;
+
 SELECT * FROM actor;
+
 SELECT * FROM film_category;
+
 SELECT * FROM film_actor;
 
 SELECT * FROM category;
+
 SELECT * FROM inventory;
+
 SELECT * FROM rental;
 
